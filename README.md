@@ -2,8 +2,8 @@
 
 繁體中文、深色介面的純前端心率面板，支援最多四支標準 BLE 心率裝置、展示模式、每台獨立錄製、本機歷史與 CSV 匯出。所有圖片、樣式、圖示及 Chart.js 4.5.1 均隨專案提供，不需外部 CDN。網站只提供靜態檔案，沒有帳號、後端 API 或雲端心率資料服務。
 
-- [線上使用 GitHub Pages](https://root50643.github.io/exercise-heart-rate/)
-- [GitHub 原始碼](https://github.com/root50643/exercise-heart-rate)
+- [線上使用 GitHub Pages](https://hplin50643.github.io/exercise-heart-rate/)
+- [GitHub 原始碼](https://github.com/hplin50643/exercise-heart-rate)
 
 線上版本請使用支援 Web Bluetooth 的 Chrome、Edge 或樹莓派 Chromium；點擊「搜尋並連線」選取本機附近的裝置。沒有裝置時可使用展示模式。線上網站首次載入需要網路；若要在沒有網路的環境使用，請下載專案並依下方說明啟動本機版本。
 
@@ -18,7 +18,7 @@
 先下載 GitHub 專案 ZIP 並解壓縮，或執行：
 
 ```sh
-git clone https://github.com/root50643/exercise-heart-rate.git
+git clone https://github.com/hplin50643/exercise-heart-rate.git
 cd exercise-heart-rate
 ```
 
@@ -75,9 +75,9 @@ BLE 連線發生於**開啟網頁的電腦**。在另一台電腦開啟網頁不
 
 設定、紀錄與逐筆樣本保存在 IndexedDB，沒有上傳到伺服器。樣本與統計一併提交；寫入失敗會停止錄製並顯示提示，即時監看仍可繼續。重新載入後不會自動續錄，尚未正常結束的紀錄標記為中斷。
 
-公開 GitHub 儲存庫與 Pages 只包含程式及靜態素材，不包含瀏覽器內的運動紀錄。`http://localhost:8000` 與 `https://root50643.github.io` 是不同來源，本機舊紀錄不會自動移轉至線上版；需要保留時，請先在原網址匯出 CSV。CSV 目前僅供匯出，不支援匯入。
+公開 GitHub 儲存庫與 Pages 只包含程式及靜態素材，不包含瀏覽器內的運動紀錄。`http://localhost:8000` 與 `https://hplin50643.github.io` 是不同來源，本機舊紀錄不會自動移轉至線上版；需要保留時，請先在原網址匯出 CSV。CSV 目前僅供匯出，不支援匯入。
 
-瀏覽器以來源（協定、主機、埠號）區分儲存區，不以網址路徑區分。同一 GitHub 帳號下的 Pages 專案共用 `https://root50643.github.io` 來源；本專案的不同副本若沿用同一資料庫名稱，也會共用資料與分頁鎖定。
+瀏覽器以來源（協定、主機、埠號）區分儲存區，不以網址路徑區分。同一 GitHub 帳號下的 Pages 專案共用 `https://hplin50643.github.io` 來源；本專案的不同副本若沿用同一資料庫名稱，也會共用資料與分頁鎖定。
 
 同一瀏覽器來源只允許一個分頁負責監測與錄製。第二個分頁會進入唯讀模式，可查看及匯出歷史；要在第二個分頁開始監測，先關閉原分頁再重新整理。
 
